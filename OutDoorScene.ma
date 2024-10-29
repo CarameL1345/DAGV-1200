@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: OutDoorScene.ma
-//Last modified: Fri, Oct 25, 2024 10:18:26 PM
+//Last modified: Mon, Oct 28, 2024 07:39:22 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -14,19 +14,19 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "077B4D70-4911-CCC7-BFB3-74B34D5FA2B1";
+fileInfo "UUID" "3BEC62A9-4127-CF1F-19F5-33B9712AFB09";
 createNode transform -s -n "persp";
 	rename -uid "2AC97CB2-42B8-1EBD-CB32-96BE79B14B0A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 76.357922547570752 35.793709079769108 -24.16598961316463 ;
-	setAttr ".r" -type "double3" 338.06164691230185 -972.19999999986976 0 ;
+	setAttr ".t" -type "double3" 24.005222262964793 10.488632311020647 5.4059484730414988 ;
+	setAttr ".r" -type "double3" 341.06164691225229 -1005.0000000000673 6.1443598174734627e-15 ;
 	setAttr ".rp" -type "double3" 1.1102230246251565e-16 2.2204460492503131e-16 4.4408920985006262e-16 ;
 	setAttr ".rpt" -type "double3" 2.0865996611341458e-15 -2.6106128631021907e-15 -1.5258420159267441e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "309AAF26-4847-4E4C-D54C-C1970030E8CB";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 84.53803961620315;
+	setAttr ".coi" 24.725457100475712;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -27694,13 +27694,14 @@ createNode transform -n "Bulb" -p "StreetLight";
 	setAttr ".sp" -type "double3" 3.427028250545098 4.4068165111127886 -2.3645495490723363 ;
 createNode transform -n "Bulb" -p "|StreetLight|Bulb";
 	rename -uid "146C1C68-496A-9B82-D4B4-0BBEEACF30A9";
-	setAttr ".rp" -type "double3" 3.4059442281723022 4.9094285964965803 -2.3683351278305054 ;
-	setAttr ".sp" -type "double3" 3.4059442281723022 4.9094285964965803 -2.3683351278305054 ;
+	setAttr ".rp" -type "double3" 3.4059442281723022 4.909428596496582 -2.3683351278305054 ;
+	setAttr ".sp" -type "double3" 3.4059442281723022 4.909428596496582 -2.3683351278305054 ;
 createNode mesh -n "BulbShape" -p "|StreetLight|Bulb|Bulb";
 	rename -uid "7C755B3A-4104-CB88-C603-C5A6BA1F421F";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.50000005960464478 0.80000013113021851 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 439 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0 0.050000001 0.050000001 0.050000001
@@ -30781,7 +30782,7 @@ createNode mesh -n "PostShape" -p "Post";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.20165115594863892 ;
+	setAttr ".pv" -type "double2" 0.5 1 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 1354 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0 0.074360296 1 1 1 0.3451027
@@ -31111,6 +31112,18 @@ createNode mesh -n "PostShape" -p "Post";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 13 ".pt";
+	setAttr ".pt[1]" -type "float3" 0 -1.4901161e-08 0 ;
+	setAttr ".pt[903]" -type "float3" 0 -1.4901161e-08 0 ;
+	setAttr ".pt[922]" -type "float3" 0 -1.4901161e-08 0 ;
+	setAttr ".pt[929]" -type "float3" 0 -1.4901161e-08 0 ;
+	setAttr ".pt[933]" -type "float3" 0 -1.4901161e-08 0 ;
+	setAttr ".pt[937]" -type "float3" 0 -1.4901161e-08 0 ;
+	setAttr ".pt[953]" -type "float3" 0 -1.4901161e-08 0 ;
+	setAttr ".pt[957]" -type "float3" 0 -1.4901161e-08 0 ;
+	setAttr ".pt[961]" -type "float3" 0 -1.4901161e-08 0 ;
+	setAttr ".pt[964]" -type "float3" 0 -1.4901161e-08 0 ;
+	setAttr ".pt[967]" -type "float3" 0 -1.4901161e-08 0 ;
 	setAttr -s 1112 ".vt";
 	setAttr ".vt[0:165]"  1.8796891 1.58712578 -2.50188851 3.40624022 5.35512543 -2.49045944
 		 1.81651902 4.62863207 -2.50188851 1.8634727 2.97788095 -2.50188851 1.88102663 2.18768811 -2.50188851
@@ -49915,7 +49928,7 @@ createNode aiSkyDomeLight -n "aiSkyDomeLightShape1" -p "aiSkyDomeLight1";
 	setAttr -k off ".v";
 createNode transform -n "camera1";
 	rename -uid "214B285E-42F1-1451-244D-C0AB3909A5A7";
-	setAttr ".t" -type "double3" 14.844323589057584 11.599372023317025 11.157841869474217 ;
+	setAttr ".t" -type "double3" 15.85005051739444 12.243582683068121 11.978011780656546 ;
 	setAttr ".r" -type "double3" -26.400000000000386 50.802769823231323 0 ;
 	setAttr ".s" -type "double3" 1 1 0.99999999999999989 ;
 	setAttr ".rp" -type "double3" 0 0.21003135714285714 -0.05699150000000007 ;
@@ -49928,7 +49941,7 @@ createNode camera -n "cameraShape1" -p "camera1";
 	setAttr ".rnd" no;
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
 	setAttr ".ff" 0;
-	setAttr ".coi" 9.8988666295490511;
+	setAttr ".coi" 11.34771883447806;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
@@ -49992,20 +50005,20 @@ createNode areaLight -n "areaLightShape4" -p "areaLight4";
 	setAttr ".in" 25;
 	setAttr ".ai_exposure" 5;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "92C969E9-4714-2551-B0A7-F28C99125FEC";
-	setAttr -s 14 ".lnk";
-	setAttr -s 14 ".slnk";
+	rename -uid "66AEB79C-422F-E34F-6BA4-EF9362E4FFC5";
+	setAttr -s 22 ".lnk";
+	setAttr -s 22 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "770654EA-417C-0AE9-3741-0C9E241150F4";
+	rename -uid "21E88134-4D7C-A065-0FA6-3F91E6106FD7";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "23153633-4A13-9328-5CDB-43A89830C158";
+	rename -uid "1B82DAAB-4826-6649-2A84-ECACDD7CA1ED";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7BCB5CD6-4DFB-0AA3-E700-668F03A321A1";
+	rename -uid "57B30A78-4ED0-9257-54E6-1A951532522B";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "A71F2D0A-4570-A195-F81C-6B93C8E33B4A";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "AD4FB91A-4FA5-6A2F-3BD5-F0BECAD0724A";
+	rename -uid "595E00D4-4E14-2277-D30D-0D884193959B";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "58CC98D3-41A6-E8E7-08C5-A1811227D1E6";
 	setAttr ".g" yes;
@@ -50154,7 +50167,7 @@ createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	setAttr ".GI_specular_samples" 3;
 	setAttr ".GI_total_depth" 13;
 	setAttr ".version" -type "string" "5.4.2.1";
-	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=cameraShape1;Snapshots Folder=C:/Users/Ryder/Documents/maya/projects/default/images/snapshots/OutDoorScene;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1   1;Background.Offset=0   0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1   1;Foreground.Offset=0   0;Foreground.Apply Color Management=1;";
+	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=cameraShape1;Snapshots Folder=C:/Users/Ryder/Documents/maya/projects/default/images/snapshots/OutDoorScene;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1    1;Background.Offset=0    0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1    1;Foreground.Offset=0    0;Foreground.Apply Color Management=1;";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "E421E56F-4D28-A4B7-85EE-819EF4F31BD5";
 	setAttr ".ai_translator" -type "string" "gaussian";
@@ -50192,17 +50205,15 @@ createNode blinn -n "Metal";
 createNode shadingEngine -n "blinn1SG";
 	rename -uid "E5C8C7EB-4A12-7682-450E-4698121C085F";
 	setAttr ".ihi" 0;
-	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo1";
 	rename -uid "A645F8C2-46AA-ED67-BBD2-A88985CC6A91";
 createNode lambert -n "Orange";
 	rename -uid "AD48D21A-4495-EA60-B6C0-82889673CD77";
-	setAttr ".c" -type "float3" 0.47096774 0.27749419 0 ;
+	setAttr ".c" -type "float3" 0.47099999 0.27751321 0 ;
 createNode shadingEngine -n "lambert2SG";
 	rename -uid "DC353951-4E5D-0519-F76C-1A96C5A995EB";
 	setAttr ".ihi" 0;
-	setAttr -s 60 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo2";
 	rename -uid "D4FAE34F-47C9-5715-6775-A7973816DA48";
@@ -50212,7 +50223,6 @@ createNode lambert -n "Brown";
 createNode shadingEngine -n "lambert3SG";
 	rename -uid "FABFD555-4693-4AD8-6B4D-C1A9D1332D4C";
 	setAttr ".ihi" 0;
-	setAttr -s 7 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo3";
 	rename -uid "2D553205-4E6C-179A-8AE3-818EDCBBE9A5";
@@ -50222,17 +50232,15 @@ createNode lambert -n "Ground_Grass";
 createNode shadingEngine -n "lambert4SG";
 	rename -uid "47A01917-4730-F432-6727-16AC16C5776F";
 	setAttr ".ihi" 0;
-	setAttr -s 34 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo4";
 	rename -uid "A3EB627B-48A8-A16E-3338-368E218CE799";
 createNode lambert -n "Gray";
 	rename -uid "0A8FFC2F-42CA-2854-B9FB-C583125E6E1E";
-	setAttr ".c" -type "float3" 0.077419356 0.077419356 0.077419356 ;
+	setAttr ".c" -type "float3" 0.11612903 0.11612903 0.11612903 ;
 createNode shadingEngine -n "lambert5SG";
 	rename -uid "00A93E42-483E-CD0C-A4FF-A0B193DD88C0";
 	setAttr ".ihi" 0;
-	setAttr -s 33 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo5";
 	rename -uid "DC68B5CD-4992-7311-6354-DAAAB886ED3A";
@@ -50268,7 +50276,7 @@ createNode materialInfo -n "materialInfo8";
 	rename -uid "10F677FF-4465-19B0-2928-48905E6BDF6E";
 createNode lambert -n "Purple";
 	rename -uid "609D2E22-4E43-58AB-5F5A-CC8D2CCC4563";
-	setAttr ".c" -type "float3" 0.16224642 0.1452221 0.18064517 ;
+	setAttr ".c" -type "float3" 0.16257375 0.145524 0.18099999 ;
 createNode shadingEngine -n "lambert8SG";
 	rename -uid "B59DDC4D-44CC-155C-EF88-B68C6F4BDDED";
 	setAttr ".ihi" 0;
@@ -50288,7 +50296,6 @@ createNode blinn -n "Light";
 createNode shadingEngine -n "blinn3SG";
 	rename -uid "824254AC-465F-853F-8752-B3A3C6C72F95";
 	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo11";
 	rename -uid "F6D7A7A9-4728-FADF-55B6-1F949E586821";
@@ -50299,86 +50306,227 @@ createNode aiPhysicalSky -n "aiPhysicalSky1";
 	setAttr ".sun_tint" -type "float3" 0.58231032 0.29399723 1 ;
 	setAttr ".sky_tint" -type "float3" 0.35980511 0.31589264 1 ;
 	setAttr ".intensity" 3;
-createNode aiStandardSurface -n "aiStandardSurface1";
+createNode aiStandardSurface -n "OrangeArnold";
 	rename -uid "9514F9F7-4524-0180-AE94-1880C1D1A262";
+	setAttr ".base_color" -type "float3" 0.493 0.31419995 0.057680991 ;
+	setAttr ".specular_roughness" 0.69930070638656616;
 createNode shadingEngine -n "aiStandardSurface1SG";
 	rename -uid "15D4D9E6-425F-1E41-D80C-9C8279B1A8FA";
 	setAttr ".ihi" 0;
+	setAttr -s 60 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo12";
 	rename -uid "1F425B14-424A-48A4-8F95-A89B4049414F";
+createNode aiStandardSurface -n "BrownArnold";
+	rename -uid "AA790843-4475-1B4D-B47F-D787FF947B0D";
+	setAttr ".base_color" -type "float3" 0.118 0.089322045 0.049323998 ;
+	setAttr ".specular_color" -type "float3" 0 0 0 ;
+	setAttr ".specular_roughness" 0.85314685106277466;
+createNode shadingEngine -n "aiStandardSurface2SG";
+	rename -uid "77592599-402F-1463-33F3-6D9F8F9F67F2";
+	setAttr ".ihi" 0;
+	setAttr -s 7 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo13";
+	rename -uid "4E31D1F0-4487-4982-7A9D-D1BD948736A7";
+createNode aiStandardSurface -n "GrayArnold";
+	rename -uid "5808C656-4BFB-30B9-5A4C-33B4DE2C35B4";
+	setAttr ".base_color" -type "float3" 0.090909094 0.084491454 0.075545453 ;
+	setAttr ".specular_color" -type "float3" 0.032000002 0.032000002 0.032000002 ;
+	setAttr ".specular_roughness" 0.8741258978843689;
+createNode shadingEngine -n "aiStandardSurface3SG";
+	rename -uid "2996BB88-4756-49CC-39A5-9C8A05E29208";
+	setAttr ".ihi" 0;
+	setAttr -s 33 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo14";
+	rename -uid "1568E063-478D-D08B-D559-69B96C4A7230";
+createNode aiStandardSurface -n "GroundArnold";
+	rename -uid "D448A265-4263-573A-1C72-66A122BB1B30";
+	setAttr ".base_color" -type "float3" 0.28999999 0.20202325 0.080040008 ;
+	setAttr ".diffuse_roughness" 1;
+	setAttr ".specular_roughness" 1;
+createNode shadingEngine -n "aiStandardSurface4SG";
+	rename -uid "05A3BF7A-43CB-D62D-0EEA-5A9B158E6CDE";
+	setAttr ".ihi" 0;
+	setAttr -s 34 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo15";
+	rename -uid "5D9D660E-4B81-F848-FB01-84A60DC2668D";
+createNode aiStandardSurface -n "MetalArnold";
+	rename -uid "CDC3538E-441A-A6FD-A3CB-9B99FDFA8B60";
+	setAttr ".base_color" -type "float3" 0.169 0.16250879 0.153621 ;
+	setAttr ".specular_roughness" 0.53846156597137451;
+	setAttr ".metalness" 0.65034967660903931;
+createNode shadingEngine -n "aiStandardSurface5SG";
+	rename -uid "C55360C3-47DC-7A41-87AD-0EAF07A23491";
+	setAttr ".ihi" 0;
+	setAttr -s 4 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo16";
+	rename -uid "74C74D55-4F64-79A6-01C0-F7AB960BECB8";
+createNode aiStandardSurface -n "ShinyOrangeArnold";
+	rename -uid "834F0005-4E31-542B-4739-379038BA863D";
+	setAttr ".base_color" -type "float3" 0.50400001 0.31732282 0.049391996 ;
+createNode shadingEngine -n "aiStandardSurface6SG";
+	rename -uid "C2BFA5C2-4726-194C-10A0-2A9D5DE9206C";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo17";
+	rename -uid "FE881958-4AC9-0B43-39C1-18B39382C85C";
+createNode aiStandardSurface -n "LightArnold";
+	rename -uid "E4F2FD64-4571-ED01-F93E-A58893610A99";
+	setAttr ".base_color" -type "float3" 0.61900002 0.40610528 0 ;
+	setAttr ".transmission" 1;
+createNode shadingEngine -n "aiStandardSurface7SG";
+	rename -uid "A2258082-4069-40E1-8671-D3AB589534AC";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo18";
+	rename -uid "B96556F2-42FB-2E5B-8E61-CBB19A851935";
+createNode aiStandardSurface -n "GlowLight";
+	rename -uid "5D52A41D-4125-99C4-8B57-1FB655771A2C";
+	setAttr ".base_color" -type "float3" 1 0.98390001 0 ;
+	setAttr ".emission" 1;
+	setAttr ".emission_color" -type "float3" 1 0.98390001 0 ;
+createNode shadingEngine -n "aiStandardSurface8SG";
+	rename -uid "B64FCA5A-456B-4E74-D42A-EF8B477DF90C";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo19";
+	rename -uid "895695A1-4E61-A761-6BEE-17AE2335BA11";
+createNode aiStandardSurface -n "PurpleArnold";
+	rename -uid "A4EAF541-4FAC-272F-CB41-5297456E0CC3";
+	setAttr ".base_color" -type "float3" 0.16260482 0.145705 0.18099999 ;
+	setAttr ".diffuse_roughness" 1;
+	setAttr ".specular_roughness" 1;
+createNode shadingEngine -n "aiStandardSurface9SG";
+	rename -uid "4A202DBB-410B-781F-4A44-3B88FEB5C028";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo20";
+	rename -uid "FF256104-440A-865B-EBCA-E8B028BDFD6F";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "681ECDE4-4E1A-39DE-3758-9DBC73E35421";
+	rename -uid "E919C03E-4910-03AB-2F06-0ABA02AEE7A4";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" 3253.254843602494 -2486.9046630840494 ;
-	setAttr ".tgi[0].vh" -type "double2" 5756.2686079150208 -939.28567696185473 ;
-	setAttr -s 22 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 915.71429443359375;
-	setAttr ".tgi[0].ni[0].y" -660;
-	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" 917.14288330078125;
-	setAttr ".tgi[0].ni[1].y" -707.14288330078125;
+	setAttr ".tgi[0].vl" -type "double2" 6326.4615287306387 -2683.8591412337228 ;
+	setAttr ".tgi[0].vh" -type "double2" 8097.7209948840218 -1588.685467699994 ;
+	setAttr -s 38 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 6095.71435546875;
+	setAttr ".tgi[0].ni[0].y" -2012.857177734375;
+	setAttr ".tgi[0].ni[0].nvs" 2387;
+	setAttr ".tgi[0].ni[1].x" 6444.28564453125;
+	setAttr ".tgi[0].ni[1].y" -2012.857177734375;
 	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" 1225.7142333984375;
-	setAttr ".tgi[0].ni[2].y" -664.28570556640625;
+	setAttr ".tgi[0].ni[2].x" 7145.71435546875;
+	setAttr ".tgi[0].ni[2].y" -1902.857177734375;
 	setAttr ".tgi[0].ni[2].nvs" 1923;
-	setAttr ".tgi[0].ni[3].x" 1224.2857666015625;
-	setAttr ".tgi[0].ni[3].y" -707.14288330078125;
-	setAttr ".tgi[0].ni[3].nvs" 1923;
-	setAttr ".tgi[0].ni[4].x" 254.28572082519531;
-	setAttr ".tgi[0].ni[4].y" -332.85714721679688;
-	setAttr ".tgi[0].ni[4].nvs" 1923;
-	setAttr ".tgi[0].ni[5].x" 561.4285888671875;
-	setAttr ".tgi[0].ni[5].y" -332.85714721679688;
+	setAttr ".tgi[0].ni[3].x" 6797.14306640625;
+	setAttr ".tgi[0].ni[3].y" -1902.857177734375;
+	setAttr ".tgi[0].ni[3].nvs" 2387;
+	setAttr ".tgi[0].ni[4].x" 6438.5712890625;
+	setAttr ".tgi[0].ni[4].y" -1804.2857666015625;
+	setAttr ".tgi[0].ni[4].nvs" 2387;
+	setAttr ".tgi[0].ni[5].x" 6787.14306640625;
+	setAttr ".tgi[0].ni[5].y" -1804.2857666015625;
 	setAttr ".tgi[0].ni[5].nvs" 1923;
-	setAttr ".tgi[0].ni[6].x" 3304.28564453125;
-	setAttr ".tgi[0].ni[6].y" -1204.2857666015625;
-	setAttr ".tgi[0].ni[6].nvs" 2387;
-	setAttr ".tgi[0].ni[7].x" 254.28572082519531;
-	setAttr ".tgi[0].ni[7].y" -332.85714721679688;
-	setAttr ".tgi[0].ni[7].nvs" 1923;
-	setAttr ".tgi[0].ni[8].x" 2372.857177734375;
-	setAttr ".tgi[0].ni[8].y" -732.85711669921875;
+	setAttr ".tgi[0].ni[6].x" 7291.4287109375;
+	setAttr ".tgi[0].ni[6].y" -1804.2857666015625;
+	setAttr ".tgi[0].ni[6].nvs" 1923;
+	setAttr ".tgi[0].ni[7].x" 6942.85693359375;
+	setAttr ".tgi[0].ni[7].y" -1804.2857666015625;
+	setAttr ".tgi[0].ni[7].nvs" 2387;
+	setAttr ".tgi[0].ni[8].x" 6787.14306640625;
+	setAttr ".tgi[0].ni[8].y" -1804.2857666015625;
 	setAttr ".tgi[0].ni[8].nvs" 1923;
-	setAttr ".tgi[0].ni[9].x" 1018.5714111328125;
-	setAttr ".tgi[0].ni[9].y" -671.4285888671875;
-	setAttr ".tgi[0].ni[9].nvs" 1923;
-	setAttr ".tgi[0].ni[10].x" 915.71429443359375;
-	setAttr ".tgi[0].ni[10].y" -705.71429443359375;
-	setAttr ".tgi[0].ni[10].nvs" 1923;
-	setAttr ".tgi[0].ni[11].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[11].y" -732.85711669921875;
+	setAttr ".tgi[0].ni[9].x" 6438.5712890625;
+	setAttr ".tgi[0].ni[9].y" -1804.2857666015625;
+	setAttr ".tgi[0].ni[9].nvs" 2387;
+	setAttr ".tgi[0].ni[10].x" 7450;
+	setAttr ".tgi[0].ni[10].y" -1804.2857666015625;
+	setAttr ".tgi[0].ni[10].nvs" 2387;
+	setAttr ".tgi[0].ni[11].x" 7798.5712890625;
+	setAttr ".tgi[0].ni[11].y" -1804.2857666015625;
 	setAttr ".tgi[0].ni[11].nvs" 1923;
-	setAttr ".tgi[0].ni[12].x" 915.71429443359375;
-	setAttr ".tgi[0].ni[12].y" -705.71429443359375;
+	setAttr ".tgi[0].ni[12].x" 3652.857177734375;
+	setAttr ".tgi[0].ni[12].y" -1204.2857666015625;
 	setAttr ".tgi[0].ni[12].nvs" 1923;
-	setAttr ".tgi[0].ni[13].x" 561.4285888671875;
-	setAttr ".tgi[0].ni[13].y" -332.85714721679688;
+	setAttr ".tgi[0].ni[13].x" 917.14288330078125;
+	setAttr ".tgi[0].ni[13].y" -707.14288330078125;
 	setAttr ".tgi[0].ni[13].nvs" 1923;
-	setAttr ".tgi[0].ni[14].x" 1325.7142333984375;
-	setAttr ".tgi[0].ni[14].y" -671.4285888671875;
+	setAttr ".tgi[0].ni[14].x" 918.5714111328125;
+	setAttr ".tgi[0].ni[14].y" -664.28570556640625;
 	setAttr ".tgi[0].ni[14].nvs" 1923;
-	setAttr ".tgi[0].ni[15].x" 918.5714111328125;
-	setAttr ".tgi[0].ni[15].y" -664.28570556640625;
+	setAttr ".tgi[0].ni[15].x" 2372.857177734375;
+	setAttr ".tgi[0].ni[15].y" -732.85711669921875;
 	setAttr ".tgi[0].ni[15].nvs" 1923;
-	setAttr ".tgi[0].ni[16].x" 1222.857177734375;
-	setAttr ".tgi[0].ni[16].y" -704.28570556640625;
+	setAttr ".tgi[0].ni[16].x" 915.71429443359375;
+	setAttr ".tgi[0].ni[16].y" -660;
 	setAttr ".tgi[0].ni[16].nvs" 1923;
-	setAttr ".tgi[0].ni[17].x" 3652.857177734375;
-	setAttr ".tgi[0].ni[17].y" -1204.2857666015625;
+	setAttr ".tgi[0].ni[17].x" 561.4285888671875;
+	setAttr ".tgi[0].ni[17].y" -332.85714721679688;
 	setAttr ".tgi[0].ni[17].nvs" 1923;
-	setAttr ".tgi[0].ni[18].x" 1222.857177734375;
-	setAttr ".tgi[0].ni[18].y" -705.71429443359375;
+	setAttr ".tgi[0].ni[18].x" 1224.2857666015625;
+	setAttr ".tgi[0].ni[18].y" -707.14288330078125;
 	setAttr ".tgi[0].ni[18].nvs" 1923;
-	setAttr ".tgi[0].ni[19].x" 1222.857177734375;
-	setAttr ".tgi[0].ni[19].y" -705.71429443359375;
+	setAttr ".tgi[0].ni[19].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[19].y" -732.85711669921875;
 	setAttr ".tgi[0].ni[19].nvs" 1923;
 	setAttr ".tgi[0].ni[20].x" 1222.857177734375;
-	setAttr ".tgi[0].ni[20].y" -660;
+	setAttr ".tgi[0].ni[20].y" -705.71429443359375;
 	setAttr ".tgi[0].ni[20].nvs" 1923;
-	setAttr ".tgi[0].ni[21].x" 915.71429443359375;
-	setAttr ".tgi[0].ni[21].y" -704.28570556640625;
+	setAttr ".tgi[0].ni[21].x" 254.28572082519531;
+	setAttr ".tgi[0].ni[21].y" -332.85714721679688;
 	setAttr ".tgi[0].ni[21].nvs" 1923;
+	setAttr ".tgi[0].ni[22].x" 1325.7142333984375;
+	setAttr ".tgi[0].ni[22].y" -671.4285888671875;
+	setAttr ".tgi[0].ni[22].nvs" 1923;
+	setAttr ".tgi[0].ni[23].x" 6942.85693359375;
+	setAttr ".tgi[0].ni[23].y" -1804.2857666015625;
+	setAttr ".tgi[0].ni[23].nvs" 2387;
+	setAttr ".tgi[0].ni[24].x" 7291.4287109375;
+	setAttr ".tgi[0].ni[24].y" -1804.2857666015625;
+	setAttr ".tgi[0].ni[24].nvs" 1923;
+	setAttr ".tgi[0].ni[25].x" 254.28572082519531;
+	setAttr ".tgi[0].ni[25].y" -332.85714721679688;
+	setAttr ".tgi[0].ni[25].nvs" 1923;
+	setAttr ".tgi[0].ni[26].x" 915.71429443359375;
+	setAttr ".tgi[0].ni[26].y" -704.28570556640625;
+	setAttr ".tgi[0].ni[26].nvs" 1923;
+	setAttr ".tgi[0].ni[27].x" 3304.28564453125;
+	setAttr ".tgi[0].ni[27].y" -1204.2857666015625;
+	setAttr ".tgi[0].ni[27].nvs" 2387;
+	setAttr ".tgi[0].ni[28].x" 1222.857177734375;
+	setAttr ".tgi[0].ni[28].y" -705.71429443359375;
+	setAttr ".tgi[0].ni[28].nvs" 1923;
+	setAttr ".tgi[0].ni[29].x" 1222.857177734375;
+	setAttr ".tgi[0].ni[29].y" -704.28570556640625;
+	setAttr ".tgi[0].ni[29].nvs" 1923;
+	setAttr ".tgi[0].ni[30].x" 915.71429443359375;
+	setAttr ".tgi[0].ni[30].y" -705.71429443359375;
+	setAttr ".tgi[0].ni[30].nvs" 1923;
+	setAttr ".tgi[0].ni[31].x" 1225.7142333984375;
+	setAttr ".tgi[0].ni[31].y" -664.28570556640625;
+	setAttr ".tgi[0].ni[31].nvs" 1923;
+	setAttr ".tgi[0].ni[32].x" 1018.5714111328125;
+	setAttr ".tgi[0].ni[32].y" -671.4285888671875;
+	setAttr ".tgi[0].ni[32].nvs" 1923;
+	setAttr ".tgi[0].ni[33].x" 915.71429443359375;
+	setAttr ".tgi[0].ni[33].y" -705.71429443359375;
+	setAttr ".tgi[0].ni[33].nvs" 1923;
+	setAttr ".tgi[0].ni[34].x" 1222.857177734375;
+	setAttr ".tgi[0].ni[34].y" -660;
+	setAttr ".tgi[0].ni[34].nvs" 1923;
+	setAttr ".tgi[0].ni[35].x" 561.4285888671875;
+	setAttr ".tgi[0].ni[35].y" -332.85714721679688;
+	setAttr ".tgi[0].ni[35].nvs" 1923;
+	setAttr ".tgi[0].ni[36].x" 6942.85693359375;
+	setAttr ".tgi[0].ni[36].y" -1804.2857666015625;
+	setAttr ".tgi[0].ni[36].nvs" 2387;
+	setAttr ".tgi[0].ni[37].x" 7291.4287109375;
+	setAttr ".tgi[0].ni[37].y" -1804.2857666015625;
+	setAttr ".tgi[0].ni[37].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -50390,10 +50538,10 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 14 ".st";
+	setAttr -s 22 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 16 ".s";
+	setAttr -s 24 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
@@ -50450,6 +50598,14 @@ relationship "link" ":lightLinker1" "lambert8SG.message" ":defaultLightSet.messa
 relationship "link" ":lightLinker1" "lambert1SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "blinn3SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "aiStandardSurface1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiStandardSurface2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiStandardSurface3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiStandardSurface4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiStandardSurface5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiStandardSurface6SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiStandardSurface7SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiStandardSurface8SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiStandardSurface9SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
@@ -50464,6 +50620,14 @@ relationship "shadowLink" ":lightLinker1" "lambert8SG.message" ":defaultLightSet
 relationship "shadowLink" ":lightLinker1" "lambert1SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "blinn3SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "aiStandardSurface1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiStandardSurface2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiStandardSurface3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiStandardSurface4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiStandardSurface5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiStandardSurface6SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiStandardSurface7SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiStandardSurface8SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiStandardSurface9SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
@@ -50473,160 +50637,21 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "Metal.oc" "blinn1SG.ss";
-connectAttr "FrameShape.iog" "blinn1SG.dsm" -na;
-connectAttr "PostShape.iog" "blinn1SG.dsm" -na;
-connectAttr "Post1Shape.iog" "blinn1SG.dsm" -na;
-connectAttr "ShaftShape.iog" "blinn1SG.dsm" -na;
 connectAttr "blinn1SG.msg" "materialInfo1.sg";
 connectAttr "Metal.msg" "materialInfo1.m";
 connectAttr "Orange.oc" "lambert2SG.ss";
-connectAttr "Leaf45Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf44Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf43Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf42Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf41Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf40Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf16Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf15Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf14Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf12Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf11Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf10Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf8Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf7Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf5Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf4Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf3Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf2Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf1Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group3|Leaf39|Leaf39Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group3|Leaf38|Leaf38Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group3|Leaf37|Leaf37Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group3|Leaf36|Leaf36Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group3|Leaf35|Leaf35Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group3|Leaf34|Leaf34Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group3|Leaf33|Leaf33Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group3|Leaf32|Leaf32Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group3|Leaf31|Leaf31Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group3|Leaf30|Leaf30Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group2|Leaf26|Leaf26Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group2|Leaf25|Leaf25Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group2|Leaf24|Leaf24Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group2|Leaf23|Leaf23Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group2|Leaf22|Leaf22Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group2|Leaf21|Leaf21Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group2|Leaf20|Leaf20Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group2|Leaf19|Leaf19Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group2|Leaf18|Leaf18Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group2|Leaf17|Leaf17Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group1|Leaf39|Leaf39Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group1|Leaf38|Leaf38Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group1|Leaf37|Leaf37Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group1|Leaf36|Leaf36Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group1|Leaf35|Leaf35Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group1|Leaf34|Leaf34Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group1|Leaf33|Leaf33Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group1|Leaf32|Leaf32Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group1|Leaf31|Leaf31Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group1|Leaf30|Leaf30Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "Leaf29Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group|Leaf26|Leaf26Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group|Leaf25|Leaf25Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group|Leaf24|Leaf24Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group|Leaf23|Leaf23Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group|Leaf22|Leaf22Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group|Leaf21|Leaf21Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group|Leaf20|Leaf20Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group|Leaf19|Leaf19Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group|Leaf18|Leaf18Shape.iog" "lambert2SG.dsm" -na;
-connectAttr "|Tree|Leaves5|group|Leaf17|Leaf17Shape.iog" "lambert2SG.dsm" -na;
 connectAttr "lambert2SG.msg" "materialInfo2.sg";
 connectAttr "Orange.msg" "materialInfo2.m";
 connectAttr "Brown.oc" "lambert3SG.ss";
-connectAttr "PlankShape.iog" "lambert3SG.dsm" -na;
-connectAttr "PlankShape2.iog" "lambert3SG.dsm" -na;
-connectAttr "PlankShape1.iog" "lambert3SG.dsm" -na;
-connectAttr "PlankShape5.iog" "lambert3SG.dsm" -na;
-connectAttr "PlankShape3.iog" "lambert3SG.dsm" -na;
-connectAttr "PlankShape4.iog" "lambert3SG.dsm" -na;
-connectAttr "TreeShape.iog" "lambert3SG.dsm" -na;
 connectAttr "lambert3SG.msg" "materialInfo3.sg";
 connectAttr "Brown.msg" "materialInfo3.m";
 connectAttr "Ground_Grass.oc" "lambert4SG.ss";
-connectAttr "GroundShape1.iog" "lambert4SG.dsm" -na;
-connectAttr "GroundShape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group13|Blade2|Blade2Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group13|Blade1|Blade1Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group13|Blade|BladeShape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group12|Blade6|Blade6Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group12|Blade5|Blade5Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group12|Blade3|Blade3Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group12|Blade4|Blade4Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group11|Blade6|Blade6Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group11|Blade5|Blade5Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group11|Blade7|Blade7Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group11|Blade3|Blade3Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group11|Blade4|Blade4Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group10|Blade6|Blade6Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group10|Blade5|Blade5Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group10|Blade7|Blade7Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group10|Blade3|Blade3Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group10|Blade4|Blade4Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group9|Blade2|Blade2Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group9|Blade1|Blade1Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group9|Blade|BladeShape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group8|Blade2|Blade2Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group8|Blade1|Blade1Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group8|Blade|BladeShape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group7|Blade2|Blade2Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group7|Blade1|Blade1Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group7|Blade|BladeShape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group6|Blade2|Blade2Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group6|Blade1|Blade1Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group6|Blade|BladeShape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group5|Blade2|Blade2Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group5|Blade1|Blade1Shape.iog" "lambert4SG.dsm" -na;
-connectAttr "|Grass|group5|Blade|BladeShape.iog" "lambert4SG.dsm" -na;
 connectAttr "lambert4SG.msg" "materialInfo4.sg";
 connectAttr "Ground_Grass.msg" "materialInfo4.m";
 connectAttr "Gray.oc" "lambert5SG.ss";
-connectAttr "pCube14Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path4|pCube11|pCube11Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path4|pCube9|pCube9Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path4|pCube8|pCube8Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path4|pCube7|pCube7Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path4|pCube6|pCube6Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path4|pCube5|pCube5Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path|pCube11|pCube11Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path|pCube10|pCube10Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path|pCube9|pCube9Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path|pCube8|pCube8Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path|pCube7|pCube7Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path|pCube6|pCube6Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path|pCube5|pCube5Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path1|pCube12|pCube12Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path1|pCube10|pCube10Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path1|pCube9|pCube9Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path1|pCube8|pCube8Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path1|pCube7|pCube7Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path1|pCube6|pCube6Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path1|pCube5|pCube5Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path2|pCube12|pCube12Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path2|pCube10|pCube10Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path2|pCube9|pCube9Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path2|pCube8|pCube8Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path2|pCube7|pCube7Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path2|pCube6|pCube6Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path2|pCube5|pCube5Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "pCube13Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path3|pCube9|pCube9Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path3|pCube8|pCube8Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path3|pCube7|pCube7Shape.iog" "lambert5SG.dsm" -na;
-connectAttr "|Path|Path3|pCube6|pCube6Shape.iog" "lambert5SG.dsm" -na;
 connectAttr "lambert5SG.msg" "materialInfo5.sg";
 connectAttr "Gray.msg" "materialInfo5.m";
 connectAttr "ShinyOrange.oc" "blinn2SG.ss";
-connectAttr "CanopyShape.iog" "blinn2SG.dsm" -na;
 connectAttr "blinn2SG.msg" "materialInfo6.sg";
 connectAttr "ShinyOrange.msg" "materialInfo6.m";
 connectAttr "Black.oc" "lambert6SG.ss";
@@ -50640,64 +50665,341 @@ connectAttr "MushroomShape2.iog" "lambert7SG.dsm" -na;
 connectAttr "lambert7SG.msg" "materialInfo8.sg";
 connectAttr "Red.msg" "materialInfo8.m";
 connectAttr "Purple.oc" "lambert8SG.ss";
-connectAttr "PlaneShape.iog" "lambert8SG.dsm" -na;
 connectAttr "lambert8SG.msg" "materialInfo9.sg";
 connectAttr "Purple.msg" "materialInfo9.m";
 connectAttr ":lambert1.oc" "lambert1SG.ss";
 connectAttr "lambert1SG.msg" "materialInfo10.sg";
 connectAttr ":lambert1.msg" "materialInfo10.m";
 connectAttr "Light.oc" "blinn3SG.ss";
-connectAttr "BulbShape.iog" "blinn3SG.dsm" -na;
 connectAttr "Bulb1Shape.iog" "blinn3SG.dsm" -na;
 connectAttr "blinn3SG.msg" "materialInfo11.sg";
 connectAttr "Light.msg" "materialInfo11.m";
-connectAttr "aiStandardSurface1.out" "aiStandardSurface1SG.ss";
+connectAttr "OrangeArnold.out" "aiStandardSurface1SG.ss";
+connectAttr "Leaf45Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf44Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf43Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf42Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf41Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf40Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf16Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf15Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf14Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf12Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf11Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf10Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf8Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf7Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf5Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf4Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf3Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf2Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "Leaf1Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "|Tree|Leaves5|group3|Leaf39|Leaf39Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group3|Leaf38|Leaf38Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group3|Leaf37|Leaf37Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group3|Leaf36|Leaf36Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group3|Leaf35|Leaf35Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group3|Leaf34|Leaf34Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group3|Leaf33|Leaf33Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group3|Leaf32|Leaf32Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group3|Leaf31|Leaf31Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group3|Leaf30|Leaf30Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group2|Leaf26|Leaf26Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group2|Leaf25|Leaf25Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group2|Leaf24|Leaf24Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group2|Leaf23|Leaf23Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group2|Leaf22|Leaf22Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group2|Leaf21|Leaf21Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group2|Leaf20|Leaf20Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group2|Leaf19|Leaf19Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group2|Leaf18|Leaf18Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group2|Leaf17|Leaf17Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group1|Leaf39|Leaf39Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group1|Leaf38|Leaf38Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group1|Leaf37|Leaf37Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group1|Leaf36|Leaf36Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group1|Leaf35|Leaf35Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group1|Leaf34|Leaf34Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group1|Leaf33|Leaf33Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group1|Leaf32|Leaf32Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group1|Leaf31|Leaf31Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group1|Leaf30|Leaf30Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "Leaf29Shape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "|Tree|Leaves5|group|Leaf26|Leaf26Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group|Leaf25|Leaf25Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group|Leaf24|Leaf24Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group|Leaf23|Leaf23Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group|Leaf22|Leaf22Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group|Leaf21|Leaf21Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group|Leaf20|Leaf20Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group|Leaf19|Leaf19Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group|Leaf18|Leaf18Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "|Tree|Leaves5|group|Leaf17|Leaf17Shape.iog" "aiStandardSurface1SG.dsm"
+		 -na;
 connectAttr "aiStandardSurface1SG.msg" "materialInfo12.sg";
-connectAttr "aiStandardSurface1.msg" "materialInfo12.m";
-connectAttr "aiStandardSurface1.msg" "materialInfo12.t" -na;
-connectAttr "ShinyOrange.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "OrangeArnold.msg" "materialInfo12.m";
+connectAttr "OrangeArnold.msg" "materialInfo12.t" -na;
+connectAttr "BrownArnold.out" "aiStandardSurface2SG.ss";
+connectAttr "TreeShape.iog" "aiStandardSurface2SG.dsm" -na;
+connectAttr "PlankShape.iog" "aiStandardSurface2SG.dsm" -na;
+connectAttr "PlankShape1.iog" "aiStandardSurface2SG.dsm" -na;
+connectAttr "PlankShape2.iog" "aiStandardSurface2SG.dsm" -na;
+connectAttr "PlankShape5.iog" "aiStandardSurface2SG.dsm" -na;
+connectAttr "PlankShape3.iog" "aiStandardSurface2SG.dsm" -na;
+connectAttr "PlankShape4.iog" "aiStandardSurface2SG.dsm" -na;
+connectAttr "aiStandardSurface2SG.msg" "materialInfo13.sg";
+connectAttr "BrownArnold.msg" "materialInfo13.m";
+connectAttr "BrownArnold.msg" "materialInfo13.t" -na;
+connectAttr "GrayArnold.out" "aiStandardSurface3SG.ss";
+connectAttr "pCube14Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path4|pCube11|pCube11Shape.iog" "aiStandardSurface3SG.dsm" -na
 		;
-connectAttr "Purple.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "|Path|Path4|pCube9|pCube9Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path4|pCube8|pCube8Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path4|pCube7|pCube7Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path4|pCube6|pCube6Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path4|pCube5|pCube5Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path|pCube11|pCube11Shape.iog" "aiStandardSurface3SG.dsm" -na
 		;
-connectAttr "blinn3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "|Path|Path|pCube10|pCube10Shape.iog" "aiStandardSurface3SG.dsm" -na
 		;
-connectAttr "lambert8SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "|Path|Path|pCube9|pCube9Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path|pCube8|pCube8Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path|pCube7|pCube7Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path|pCube6|pCube6Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path|pCube5|pCube5Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path1|pCube12|pCube12Shape.iog" "aiStandardSurface3SG.dsm" -na
 		;
-connectAttr "Ground_Grass.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+connectAttr "|Path|Path1|pCube10|pCube10Shape.iog" "aiStandardSurface3SG.dsm" -na
 		;
-connectAttr "lambert4SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+connectAttr "|Path|Path1|pCube9|pCube9Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path1|pCube8|pCube8Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path1|pCube7|pCube7Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path1|pCube6|pCube6Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path1|pCube5|pCube5Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path2|pCube12|pCube12Shape.iog" "aiStandardSurface3SG.dsm" -na
 		;
-connectAttr "aiStandardSurface1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+connectAttr "|Path|Path2|pCube10|pCube10Shape.iog" "aiStandardSurface3SG.dsm" -na
 		;
-connectAttr "Brown.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+connectAttr "|Path|Path2|pCube9|pCube9Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path2|pCube8|pCube8Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path2|pCube7|pCube7Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path2|pCube6|pCube6Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path2|pCube5|pCube5Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "pCube13Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path3|pCube9|pCube9Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path3|pCube8|pCube8Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path3|pCube7|pCube7Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "|Path|Path3|pCube6|pCube6Shape.iog" "aiStandardSurface3SG.dsm" -na;
+connectAttr "aiStandardSurface3SG.msg" "materialInfo14.sg";
+connectAttr "GrayArnold.msg" "materialInfo14.m";
+connectAttr "GrayArnold.msg" "materialInfo14.t" -na;
+connectAttr "GroundArnold.out" "aiStandardSurface4SG.ss";
+connectAttr "GroundShape1.iog" "aiStandardSurface4SG.dsm" -na;
+connectAttr "GroundShape.iog" "aiStandardSurface4SG.dsm" -na;
+connectAttr "|Grass|group13|Blade2|Blade2Shape.iog" "aiStandardSurface4SG.dsm" -na
 		;
-connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+connectAttr "|Grass|group13|Blade1|Blade1Shape.iog" "aiStandardSurface4SG.dsm" -na
 		;
-connectAttr "Metal.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+connectAttr "|Grass|group13|Blade|BladeShape.iog" "aiStandardSurface4SG.dsm" -na
 		;
-connectAttr "Red.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+connectAttr "|Grass|group12|Blade6|Blade6Shape.iog" "aiStandardSurface4SG.dsm" -na
 		;
-connectAttr "Orange.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+connectAttr "|Grass|group12|Blade5|Blade5Shape.iog" "aiStandardSurface4SG.dsm" -na
 		;
-connectAttr "Black.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
+connectAttr "|Grass|group12|Blade3|Blade3Shape.iog" "aiStandardSurface4SG.dsm" -na
 		;
-connectAttr "lambert3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
+connectAttr "|Grass|group12|Blade4|Blade4Shape.iog" "aiStandardSurface4SG.dsm" -na
 		;
-connectAttr "blinn1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
+connectAttr "|Grass|group11|Blade6|Blade6Shape.iog" "aiStandardSurface4SG.dsm" -na
 		;
-connectAttr "Light.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
+connectAttr "|Grass|group11|Blade5|Blade5Shape.iog" "aiStandardSurface4SG.dsm" -na
 		;
-connectAttr "lambert5SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
+connectAttr "|Grass|group11|Blade7|Blade7Shape.iog" "aiStandardSurface4SG.dsm" -na
 		;
-connectAttr "aiStandardSurface1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
+connectAttr "|Grass|group11|Blade3|Blade3Shape.iog" "aiStandardSurface4SG.dsm" -na
 		;
-connectAttr "lambert7SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[18].dn"
+connectAttr "|Grass|group11|Blade4|Blade4Shape.iog" "aiStandardSurface4SG.dsm" -na
 		;
-connectAttr "lambert6SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
+connectAttr "|Grass|group10|Blade6|Blade6Shape.iog" "aiStandardSurface4SG.dsm" -na
 		;
-connectAttr "blinn2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[20].dn"
+connectAttr "|Grass|group10|Blade5|Blade5Shape.iog" "aiStandardSurface4SG.dsm" -na
 		;
-connectAttr "Gray.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[21].dn"
+connectAttr "|Grass|group10|Blade7|Blade7Shape.iog" "aiStandardSurface4SG.dsm" -na
+		;
+connectAttr "|Grass|group10|Blade3|Blade3Shape.iog" "aiStandardSurface4SG.dsm" -na
+		;
+connectAttr "|Grass|group10|Blade4|Blade4Shape.iog" "aiStandardSurface4SG.dsm" -na
+		;
+connectAttr "|Grass|group9|Blade2|Blade2Shape.iog" "aiStandardSurface4SG.dsm" -na
+		;
+connectAttr "|Grass|group9|Blade1|Blade1Shape.iog" "aiStandardSurface4SG.dsm" -na
+		;
+connectAttr "|Grass|group9|Blade|BladeShape.iog" "aiStandardSurface4SG.dsm" -na;
+connectAttr "|Grass|group8|Blade2|Blade2Shape.iog" "aiStandardSurface4SG.dsm" -na
+		;
+connectAttr "|Grass|group8|Blade1|Blade1Shape.iog" "aiStandardSurface4SG.dsm" -na
+		;
+connectAttr "|Grass|group8|Blade|BladeShape.iog" "aiStandardSurface4SG.dsm" -na;
+connectAttr "|Grass|group7|Blade2|Blade2Shape.iog" "aiStandardSurface4SG.dsm" -na
+		;
+connectAttr "|Grass|group7|Blade1|Blade1Shape.iog" "aiStandardSurface4SG.dsm" -na
+		;
+connectAttr "|Grass|group7|Blade|BladeShape.iog" "aiStandardSurface4SG.dsm" -na;
+connectAttr "|Grass|group6|Blade2|Blade2Shape.iog" "aiStandardSurface4SG.dsm" -na
+		;
+connectAttr "|Grass|group6|Blade1|Blade1Shape.iog" "aiStandardSurface4SG.dsm" -na
+		;
+connectAttr "|Grass|group6|Blade|BladeShape.iog" "aiStandardSurface4SG.dsm" -na;
+connectAttr "|Grass|group5|Blade2|Blade2Shape.iog" "aiStandardSurface4SG.dsm" -na
+		;
+connectAttr "|Grass|group5|Blade1|Blade1Shape.iog" "aiStandardSurface4SG.dsm" -na
+		;
+connectAttr "|Grass|group5|Blade|BladeShape.iog" "aiStandardSurface4SG.dsm" -na;
+connectAttr "aiStandardSurface4SG.msg" "materialInfo15.sg";
+connectAttr "GroundArnold.msg" "materialInfo15.m";
+connectAttr "GroundArnold.msg" "materialInfo15.t" -na;
+connectAttr "MetalArnold.out" "aiStandardSurface5SG.ss";
+connectAttr "PostShape.iog" "aiStandardSurface5SG.dsm" -na;
+connectAttr "Post1Shape.iog" "aiStandardSurface5SG.dsm" -na;
+connectAttr "FrameShape.iog" "aiStandardSurface5SG.dsm" -na;
+connectAttr "ShaftShape.iog" "aiStandardSurface5SG.dsm" -na;
+connectAttr "aiStandardSurface5SG.msg" "materialInfo16.sg";
+connectAttr "MetalArnold.msg" "materialInfo16.m";
+connectAttr "MetalArnold.msg" "materialInfo16.t" -na;
+connectAttr "ShinyOrangeArnold.out" "aiStandardSurface6SG.ss";
+connectAttr "CanopyShape.iog" "aiStandardSurface6SG.dsm" -na;
+connectAttr "aiStandardSurface6SG.msg" "materialInfo17.sg";
+connectAttr "ShinyOrangeArnold.msg" "materialInfo17.m";
+connectAttr "ShinyOrangeArnold.msg" "materialInfo17.t" -na;
+connectAttr "LightArnold.out" "aiStandardSurface7SG.ss";
+connectAttr "BulbShape.iog" "aiStandardSurface7SG.dsm" -na;
+connectAttr "aiStandardSurface7SG.msg" "materialInfo18.sg";
+connectAttr "LightArnold.msg" "materialInfo18.m";
+connectAttr "LightArnold.msg" "materialInfo18.t" -na;
+connectAttr "GlowLight.out" "aiStandardSurface8SG.ss";
+connectAttr "aiStandardSurface8SG.msg" "materialInfo19.sg";
+connectAttr "GlowLight.msg" "materialInfo19.m";
+connectAttr "GlowLight.msg" "materialInfo19.t" -na;
+connectAttr "PurpleArnold.out" "aiStandardSurface9SG.ss";
+connectAttr "PlaneShape.iog" "aiStandardSurface9SG.dsm" -na;
+connectAttr "aiStandardSurface9SG.msg" "materialInfo20.sg";
+connectAttr "PurpleArnold.msg" "materialInfo20.m";
+connectAttr "PurpleArnold.msg" "materialInfo20.t" -na;
+connectAttr "BrownArnold.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "aiStandardSurface2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "aiStandardSurface3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "GrayArnold.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "GroundArnold.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "aiStandardSurface4SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "aiStandardSurface9SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+		;
+connectAttr "PurpleArnold.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+		;
+connectAttr "aiStandardSurface5SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+		;
+connectAttr "MetalArnold.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+		;
+connectAttr "ShinyOrangeArnold.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+		;
+connectAttr "aiStandardSurface6SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+		;
+connectAttr "aiStandardSurface1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
+		;
+connectAttr "Purple.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
+		;
+connectAttr "Light.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
+		;
+connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
+		;
+connectAttr "ShinyOrange.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
+		;
+connectAttr "lambert3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
+		;
+connectAttr "lambert8SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[18].dn"
+		;
+connectAttr "Orange.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
+		;
+connectAttr "lambert6SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[20].dn"
+		;
+connectAttr "Brown.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[21].dn"
+		;
+connectAttr "blinn1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[22].dn"
+		;
+connectAttr "LightArnold.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[23].dn"
+		;
+connectAttr "aiStandardSurface7SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[24].dn"
+		;
+connectAttr "Ground_Grass.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[25].dn"
+		;
+connectAttr "Gray.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[26].dn"
+		;
+connectAttr "OrangeArnold.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[27].dn"
+		;
+connectAttr "lambert7SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[28].dn"
+		;
+connectAttr "lambert5SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[29].dn"
+		;
+connectAttr "Red.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[30].dn"
+		;
+connectAttr "blinn3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[31].dn"
+		;
+connectAttr "Metal.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[32].dn"
+		;
+connectAttr "Black.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[33].dn"
+		;
+connectAttr "blinn2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[34].dn"
+		;
+connectAttr "lambert4SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[35].dn"
+		;
+connectAttr "GlowLight.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[36].dn"
+		;
+connectAttr "aiStandardSurface8SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[37].dn"
 		;
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
@@ -50711,6 +51013,14 @@ connectAttr "lambert8SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert1SG.pa" ":renderPartition.st" -na;
 connectAttr "blinn3SG.pa" ":renderPartition.st" -na;
 connectAttr "aiStandardSurface1SG.pa" ":renderPartition.st" -na;
+connectAttr "aiStandardSurface2SG.pa" ":renderPartition.st" -na;
+connectAttr "aiStandardSurface3SG.pa" ":renderPartition.st" -na;
+connectAttr "aiStandardSurface4SG.pa" ":renderPartition.st" -na;
+connectAttr "aiStandardSurface5SG.pa" ":renderPartition.st" -na;
+connectAttr "aiStandardSurface6SG.pa" ":renderPartition.st" -na;
+connectAttr "aiStandardSurface7SG.pa" ":renderPartition.st" -na;
+connectAttr "aiStandardSurface8SG.pa" ":renderPartition.st" -na;
+connectAttr "aiStandardSurface9SG.pa" ":renderPartition.st" -na;
 connectAttr "Metal.msg" ":defaultShaderList1.s" -na;
 connectAttr "Orange.msg" ":defaultShaderList1.s" -na;
 connectAttr "Brown.msg" ":defaultShaderList1.s" -na;
@@ -50721,7 +51031,15 @@ connectAttr "Black.msg" ":defaultShaderList1.s" -na;
 connectAttr "Red.msg" ":defaultShaderList1.s" -na;
 connectAttr "Purple.msg" ":defaultShaderList1.s" -na;
 connectAttr "Light.msg" ":defaultShaderList1.s" -na;
-connectAttr "aiStandardSurface1.msg" ":defaultShaderList1.s" -na;
+connectAttr "OrangeArnold.msg" ":defaultShaderList1.s" -na;
+connectAttr "BrownArnold.msg" ":defaultShaderList1.s" -na;
+connectAttr "GrayArnold.msg" ":defaultShaderList1.s" -na;
+connectAttr "GroundArnold.msg" ":defaultShaderList1.s" -na;
+connectAttr "MetalArnold.msg" ":defaultShaderList1.s" -na;
+connectAttr "ShinyOrangeArnold.msg" ":defaultShaderList1.s" -na;
+connectAttr "LightArnold.msg" ":defaultShaderList1.s" -na;
+connectAttr "GlowLight.msg" ":defaultShaderList1.s" -na;
+connectAttr "PurpleArnold.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "aiSkyDomeLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "light_Bulb1Shape.ltd" ":lightList1.l" -na;
